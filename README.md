@@ -9,11 +9,11 @@ https://api.airline.com/v1
 API key
 
 ## Endpoints
--GET/Flights
--POST/book
--DELET/cancle
+- GET/Flights
+- POST/book
+- DELET/cancle
 
 ## Tools used
--Markdown
--JSON
--Github
+- Markdown
+- JSON
+- Github
