@@ -3,14 +3,20 @@
 ## Endpoint
 POST /book
 
+---
+
 ## Description
 Book a flight ticket for a passenger.
+
+---
 
 ## Headers
 | Header | Type | Required | Description |
 |---------|-----|----------|-------------|
 | Authorization | string | Yes | Bearer token |
 | Content-Type | string | Yes | application/json |
+
+---
 
 ## Request body 
 ```json
@@ -22,6 +28,10 @@ Book a flight ticket for a passenger.
 }
 ```
 
+---
+
+
+
 ## Request Body Parameters
 | Field | Type | Required | Decsription |
 |-------|------|----------|-------------|
@@ -30,10 +40,18 @@ Book a flight ticket for a passenger.
 | age | number | Yes | Passenger age |
 | seatClass | sringe | No | Economy / buisness |
 
+---
+
+
+
 ## Example Request
 POST /book
 Authorization: Bearer YOUR_API_TOKEN
 Content-type: application/json
+
+---
+
+
 
 ```json
 {
@@ -43,6 +61,8 @@ Content-type: application/json
 "seatclass": "Economy"
 }
 ```
+---
+
 ## Example Response
 ```json
 {
@@ -51,6 +71,8 @@ Content-type: application/json
 "bookingId": "BK12345"
 }
 ```
+---
+
 ## Error Responses
 
 ### 400 Bad Request
@@ -60,6 +82,8 @@ Content-type: application/json
 "message": "Invalid input data"
 }
 ```
+---
+
 ### 401 Unauthorized
 ```json
 {
@@ -67,6 +91,7 @@ Content-type: application/json
 "message": "Missing or Invalid token"
 }
 ```
+---
 
 ### 500 Internal Server Error
 ```json
@@ -75,6 +100,7 @@ Content-type: application/json
 "message": "Server error"
 }
 ```
+---
 
 ## Notes
 - Ensure valid flightID before booking
