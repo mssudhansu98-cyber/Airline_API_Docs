@@ -6,7 +6,7 @@ This project provides documentation for a sample airline booking API
 https://api.airline.com/v1
 
 ## Authentication
-API key
+API Bearer Token
 
 ## Endpoints
 - GET/Flights
