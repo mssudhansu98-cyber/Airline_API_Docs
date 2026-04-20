@@ -1,20 +1,25 @@
 # Get Flights
 
 ## Endpoint
-GET/flights
+GET /flights
 
 ## Description
 Fetch available flights between two cities.
+
+## Headers
+| Header | Type | Required | Description |
+|--------|------|----------|------------ |
+| Authorization | string | Yes | Bearer token |
 
 ## Query Parameters
 
 | Parameter | Type | Required | Description |
 |-----------|------|----------|-------------|
-| from      |stringe|    Yes      | Departure city code |
-| to        |stringe|    Yes      | Destination City code|
+| from      |string|    Yes      | Departure city code |
+| to        |string|    Yes      | Destination city code|
 
 ## Example Request
-GET / flights?from=DEL&to=BLR
+GET /flights?from=DEL&to=BLR
 
 ## Example Response
 ```json
@@ -36,6 +41,23 @@ GET / flights?from=DEL&to=BLR
 ```json
 {
 "status": "error",
-"message": "invalid query parameter"
+"message": "Invalid query parameter"
 }
 ```
+### 401 Unauthorized
+```json
+{
+ "status": "error",
+"message": "Missing or invalid tokenn"
+}
+```
+### 404 Not found
+```json
+{
+ "status": "error",
+ "message": "Flight not found"
+ }
+```
+
+
+ 
