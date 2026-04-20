@@ -11,7 +11,7 @@ API Bearer Token
 ## Endpoints
 - GET/Flights
 - POST/book
-- DELET/cancle
+- DELET/cancel
 
 ## Tools used
 - Markdown
