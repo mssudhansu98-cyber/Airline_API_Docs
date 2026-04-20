@@ -1,24 +1,24 @@
 # Book Ticket
 
-## End point
+## Endpoint
 POST /book
 
 ## Description
-Book a flight ticket for a passanger.
+Book a flight ticket for a passenger.
 
 ## Headers
 | Header | Type | Required | Description |
 |---------|-----|----------|-------------|
 | Authorization | string | Yes | Bearer token |
-| Content- type | string | Yes | application/json |
+| Content-Type | string | Yes | application/json |
 
 ## Request body 
 ```json
 {
- "FlightId": "AI101",
+ "flightId": "AI101",
  "passengerName": "Sudhansu Sekhar",
 "age": 28,
-"seatclass": "Economy"
+"seatClass": "Economy"
 }
 ```
 
@@ -26,13 +26,13 @@ Book a flight ticket for a passanger.
 | Field | Type | Required | Decsription |
 |-------|------|----------|-------------|
 | FlightId | string | Yes | Flight ID to be booked |
-| passengername | string | Yes | Name of the passenger |
+| passengerName | string | Yes | Name of the passenger |
 | age | number | Yes | Passenger age |
 | seatClass | sringe | No | Economy / buisness |
 
 ## Example Request
 POST /book
-Authorization: Bearer Token
+Authorization: Bearer YOUR_API_TOKEN
 Content-type: application/json
 
 ```json
@@ -48,12 +48,12 @@ Content-type: application/json
 {
 "status": "success",
 "message": "Ticket booked successfully",
-"bookingid": "BK12345"
+"bookingId": "BK12345"
 }
 ```
 ## Error Responses
 
-### 404 Bad Request
+### 400 Bad Request
 ```json
 {
 "status": "error",
@@ -63,7 +63,7 @@ Content-type: application/json
 ### 401 Unauthorized
 ```json
 {
-"status": "error"
+"status": "error",
 "message": "Missing or Invalid token"
 }
 ```
@@ -71,8 +71,8 @@ Content-type: application/json
 ### 500 Internal Server Error
 ```json
 {
-"ststus": "error",
-"messege": "Server error"
+"status": "error",
+"message": "Server error"
 }
 ```
 
