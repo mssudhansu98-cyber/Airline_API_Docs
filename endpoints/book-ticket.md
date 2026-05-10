@@ -103,7 +103,7 @@ Content-type: application/json
 ---
 
 ## Notes
-- Ensure valid flightID before booking
+- Ensure valid flight ID before booking
 - Seat availablity is subject to change 
 
 
